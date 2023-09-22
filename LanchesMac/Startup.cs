@@ -37,6 +37,7 @@ public class Startup
             options.Password.RequiredUniqueChars = 1;
         });
 
+        services.Configure<ConfigurationImagens>(Configuration.GetSection("ConfigurationPastaImagens"));
 
         services.AddTransient<ILancheRepository, LancheRepository>();
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
